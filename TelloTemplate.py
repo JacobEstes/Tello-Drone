@@ -41,7 +41,12 @@ recvThread = threading.Thread(target=recv)
 recvThread.start()
 
 
-# CREATE FUNCTIONS HERE....
+def square(size):
+    sendmsg('up 50')
+    sendmsg('forward ' + str(size))
+    for i in range(3):
+        sendmsg('ccw 90')
+        sendmsg('forward ' + str(size))
 
 
 print("\nJacob Estes")
@@ -60,12 +65,8 @@ try:
         sendmsg('command', 0)
         sendmsg('takeoff')
 
-        # Make a Square
-        sendmsg('up 50')
-        sendmsg('forward 100')
-        for i in range(3):
-            sendmsg('ccw 90')
-            sendmsg('forward 100')
+        # Call Square function
+        square(50)
 
         sendmsg('land')
 
