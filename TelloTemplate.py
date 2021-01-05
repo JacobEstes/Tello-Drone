@@ -48,10 +48,6 @@ def square(size):
         sendmsg('ccw 90')
         sendmsg('forward ' + str(size))
 
-def circle():
-    sendmsg('up 50')
-    sendmsg('curve 0 0 50 50 0 50 25')
-
 
 print("\nJacob Estes")
 print("Program Name: Tello Drone Training School")
