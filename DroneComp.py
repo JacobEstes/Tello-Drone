@@ -46,6 +46,7 @@ def first_hoop():
     print()
 
 
+'''
 # Second Hoop
 def second_hoop():
     print()
@@ -59,15 +60,7 @@ def third_hoop():
 # Fourth Hoop
 def fourth_hoop():
     print()
-
-
-def square(size):
-    sendmsg('up 50')
-    sendmsg('forward ' + str(size))
-    for i in range(3):
-        sendmsg('ccw 90')
-        sendmsg('forward ' + str(size))
-
+'''
 
 print("\nJacob Estes")
 print("Program Name: Tello Drone Training School")
@@ -84,12 +77,11 @@ try:
         sendmsg('command', 0)
         sendmsg('takeoff')
 
-        # Call Square function
-        # square(50)
+        first_hoop()
 
         sendmsg('land')
 
-        print('\nGreat Flight!!!')
+        print('\nGreat Flight!')
 
     else:
         print('\nMake sure you check WIFI, surroundings, co-pilot is ready, re-run program\n')
