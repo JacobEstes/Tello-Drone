@@ -43,24 +43,31 @@ recvThread.start()
 
 # First Hoop
 def first_hoop():
-    print()
+    sendmsg('up 20')
+    sendmsg('forward 200')
 
 
-'''
 # Second Hoop
 def second_hoop():
-    print()
+    sendmsg('go 240 0 60 40', 7)
 
 
 # Third Hoop
+
 def third_hoop():
-    print()
+    # sendmsg('ccw 90', 7)
+    # sendmsg('forward 270')
+    # sendmsg('up 10', 10)
+    # sendmsg('ccw 90', 10)
+
+    sendmsg('curve 50 135 0 270 0 0 40', 20)
+    # sendmsg('curve 50 100 0 100 0 0 40', 20)
 
 
 # Fourth Hoop
 def fourth_hoop():
-    print()
-'''
+    sendmsg('go 300 0 -60 40', 10)
+
 
 print("\nJacob Estes")
 print("Program Name: Tello Drone Training School")
@@ -78,6 +85,12 @@ try:
         sendmsg('takeoff')
 
         first_hoop()
+
+        second_hoop()
+
+        third_hoop()
+
+        fourth_hoop()
 
         sendmsg('land')
 
